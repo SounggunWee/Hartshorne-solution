@@ -1,0 +1,1046 @@
+\documentclass[a4paper]{amsart}
+
+\usepackage{graphicx,psfrag,layout,appendix,subfigure}
+\usepackage{fancyhdr}
+
+\usepackage{amssymb, amsthm, amsmath, amscd, amsfonts, mathabx, mathrsfs, latexsym}
+
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{url}
+
+\usepackage{setspace}
+\usepackage{changepage}
+
+\usepackage{leftidx}
+
+
+\usepackage{bbold}
+
+\usepackage[active]{srcltx}
+
+
+\usepackage{calc}
+
+\usepackage{pb-diagram,pb-xy}
+
+\usepackage{times}
+
+\usepackage{verbatim}
+\usepackage[all,cmtip,arrow,matrix,curve,tips,frame]{xy}
+\usepackage{hyperref}
+\xyoption{matrix}
+
+\usepackage{ifthen}
+\usepackage{color}
+\usepackage{amsxtra}
+\usepackage{amstext}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+\usepackage{epsfig}
+\usepackage{pifont}
+\usepackage{charter}
+\usepackage{avant}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{bbm}
+\usepackage{tikz-cd}
+
+
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{1}
+ 
+\numberwithin{equation}{subsection}
+
+\theoremstyle{plain}
+\newtheorem{thm}[subsection]{Theorem}
+\newtheorem*{thm*}{Theorem}
+\newtheorem{nothm}{Theorem}
+\newtheorem{thmsub}[equation]{Theorem}
+
+
+\newtheorem{lem}[subsection]{Lemma}
+\newtheorem{lemsub}[equation]{Lemma}
+\newtheorem*{lem*}{Lemma}
+\newtheorem{nolem}[nothm]{Lemma}
+
+\newtheorem{prop}[subsection]{Proposition}
+\newtheorem{propdef}[subsection]{Proposition/Definition}
+\newtheorem{propsub}[equation]{Proposition}
+\newtheorem*{prop*}{Proposition}
+\newtheorem{noprop}[nothm]{Proposition}
+
+\newtheorem{cor}[subsection]{Corollary}
+\newtheorem{corsub}[equation]{Corollary}
+\newtheorem*{cor*}{Corollary}
+\newtheorem{nocor}[nothm]{Corollary}
+
+\newtheorem{claim}[subsection]{Claim}
+\newtheorem{claimsub}[equation]{Claim}
+\newtheorem*{claim*}{Claim}
+
+
+\newtheorem{conj}[subsection]{Conjecture}
+\newtheorem*{conj*}{Conjecture}
+\newtheorem{nconj}[nothm]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{defn}[subsection]{Definition}
+\newtheorem*{defn*}{Definition}
+\newtheorem{defnsub}[equation]{Definition}
+\newtheorem{nodefn}[nothm]{Definition}
+
+
+\newtheorem{ques}[subsection]{Question}
+\newtheorem*{ques*}{Question}
+\newtheorem{noques}[nothm]{Question}
+
+\newtheorem{prob}[subsection]{Problem}
+\newtheorem{goal}[subsection]{Goal}
+\newtheorem{quessub}[equation]{Question}
+\newtheorem{probsub}[equation]{Problem}
+\newtheorem{goalsub}[equation]{Goal}
+
+\newtheorem{exa}[subsection]{Example}
+\newtheorem{exasub}[equation]{Example}
+\newtheorem*{exa*}{Example}
+\newtheorem{noexa}[nothm]{Example}
+
+\newtheorem{exer}{Exercise}[subsection]
+\newtheorem{exersub}[equation]{Exercise}
+\newtheorem{noexer}[nothm]{}
+
+
+\theoremstyle{remark}
+\newtheorem{rmk}[subsection]{Remark}
+\newtheorem{rmksub}[equation]{Remark}
+\newtheorem*{rmk*}{Remark}
+\newtheorem{normk}[nothm]{Remark}
+
+
+\numberwithin{figure}{subsection}
+\numberwithin{table}{subsection}
+
+\newcommand{\eqnref}[1]{equation \eqref{#1}}
+
+\def \AA {\mathbb{A}}
+\def \BB {\mathbb{B}}
+\def \CC {\mathbb{C}}
+\def \DD {\mathbb{D}}
+\def \EE {\mathbb{E}}
+\def \FF {\mathbb{F}}
+\def \GG {\mathbb{G}}
+\def \HH {\mathbb{H}}
+\def \II {\mathbb{I}}
+\def \JJ {\mathbb{J}}
+\def \KK {\mathbb{K}}
+\def \LL {\mathbb{L}}
+\def \MM {\mathbb{M}}
+\def \NN {\mathbb{N}}
+\def \OO {\mathbb{O}}
+\def \PP {\mathbb{P}}
+\def \QQ {\mathbb{Q}}
+\def \RR {\mathbb{R}}
+\def \SS {\mathbb{S}}
+\def \TT {\mathbb{T}}
+\def \UU {\mathbb{U}}
+\def \VV {\mathbb{V}}
+\def \WW {\mathbb{W}}
+\def \XX {\mathbb{X}}
+\def \YY {\mathbb{Y}}
+\def \ZZ {\mathbb{Z}}
+
+\def \Acal {\mathcal{A}}
+\def \Bcal {\mathcal{B}}
+\def \Ccal {\mathcal{C}}
+\def \Dcal {\mathcal{D}}
+\def \Ecal {\mathcal{E}}
+\def \Fcal {\mathcal{F}}
+\def \Gcal {\mathcal{G}}
+\def \Hcal {\mathcal{H}}
+\def \Ical {\mathcal{I}}
+\def \Jcal {\mathcal{J}}
+\def \Kcal {\mathcal{K}}
+\def \Lcal {\mathcal{L}}
+\def \Mcal {\mathcal{M}}
+\def \Ncal {\mathcal{N}}
+\def \Ocal {\mathcal{O}}
+\def \Pcal {\mathcal{P}}
+\def \Qcal {\mathcal{Q}}
+\def \Rcal {\mathcal{R}}
+\def \Scal {\mathcal{S}}
+\def \Tcal {\mathcal{T}}
+\def \Ucal {\mathcal{U}}
+\def \Vcal {\mathcal{V}}
+\def \Wcal {\mathcal{W}}
+\def \Xcal {\mathcal{X}}
+\def \Ycal {\mathcal{Y}}
+\def \Zcal {\mathcal{Z}}
+
+\def \Afr {\mathfrak{A}}
+\def \Bfr {\mathfrak{B}}
+\def \Cfr {\mathfrak{C}}
+\def \Dfr {\mathfrak{D}}
+\def \Efr {\mathfrak{E}}
+\def \Ffr {\mathfrak{F}}
+\def \Gfr {\mathfrak{G}}
+\def \Hfr {\mathfrak{H}}
+\def \Ifr {\mathfrak{I}}
+\def \Jfr {\mathfrak{J}}
+\def \Kfr {\mathfrak{K}}
+\def \Lfr {\mathfrak{L}}
+\def \Mfr {\mathfrak{M}}
+\def \Nfr {\mathfrak{N}}
+\def \Ofr {\mathfrak{O}}
+\def \Pfr {\mathfrak{P}}
+\def \Qfr {\mathfrak{Q}}
+\def \Rfr {\mathfrak{R}}
+\def \Sfr {\mathfrak{S}}
+\def \Tfr {\mathfrak{T}}
+\def \Ufr {\mathfrak{U}}
+\def \Vfr {\mathfrak{V}}
+\def \Wfr {\mathfrak{W}}
+\def \Xfr {\mathfrak{X}}
+\def \Yfr {\mathfrak{Y}}
+\def \Zfr {\mathfrak{Z}}
+\def \afr {\mathfrak{a}}
+\def \bfr {\mathfrak{b}}
+\def \cfr {\mathfrak{c}}
+\def \dfr {\mathfrak{d}}
+\def \efr {\mathfrak{e}}
+\def \ffr {\mathfrak{f}}
+\def \gfr {\mathfrak{g}}
+\def \hfr {\mathfrak{h}}
+\def \ifr {\mathfrak{i}}
+\def \jfr {\mathfrak{j}}
+\def \kfr {\mathfrak{k}}
+\def \lfr {\mathfrak{l}}
+\def \mfr {\mathfrak{m}}
+\def \nfr {\mathfrak{n}}
+\def \ofr {\mathfrak{o}}
+\def \pfr {\mathfrak{p}}
+\def \qfr {\mathfrak{q}}
+\def \rfr {\mathfrak{r}}
+\def \sfr {\mathfrak{s}}
+\def \tfr {\mathfrak{t}}
+\def \ufr {\mathfrak{u}}
+\def \vfr {\mathfrak{v}}
+\def \wfr {\mathfrak{w}}
+\def \xfr {\mathfrak{x}}
+\def \yfr {\mathfrak{y}}
+\def \zfr {\mathfrak{z}}
+
+\def \Ascr {\mathscr{A}}
+\def \Bscr {\mathscr{B}}
+\def \Cscr {\mathscr{C}}
+\def \Dscr {\mathscr{D}}
+\def \Escr {\mathscr{E}}
+\def \Fscr {\mathscr{F}}
+\def \Gscr {\mathscr{G}}
+\def \Hscr {\mathscr{H}}
+\def \Iscr {\mathscr{I}}
+\def \Jscr {\mathscr{J}}
+\def \Kscr {\mathscr{K}}
+\def \Lscr {\mathscr{L}}
+\def \Mscr {\mathscr{M}}
+\def \Nscr {\mathscr{N}}
+\def \Oscr {\mathscr{O}}
+\def \Pscr {\mathscr{P}}
+\def \Qscr {\mathscr{Q}}
+\def \Rscr {\mathscr{R}}
+\def \Sscr {\mathscr{S}}
+\def \Tscr {\mathscr{T}}
+\def \Uscr {\mathscr{U}}
+\def \Vscr {\mathscr{V}}
+\def \Wscr {\mathscr{W}}
+\def \Xscr {\mathscr{X}}
+\def \Yscr {\mathscr{Y}}
+\def \Zscr {\mathscr{Z}}
+\def \ascr {\mathscr{a}}
+\def \bscr {\mathscr{b}}
+\def \cscr {\mathscr{c}}
+\def \dscr {\mathscr{d}}
+\def \escr {\mathscr{e}}
+\def \fscr {\mathscr{f}}
+\def \gscr {\mathscr{g}}
+\def \hscr {\mathscr{h}}
+\def \iscr {\mathscr{i}}
+\def \jscr {\mathscr{j}}
+\def \kscr {\mathscr{k}}
+\def \lscr {\mathscr{l}}
+\def \mscr {\mathscr{m}}
+\def \nscr {\mathscr{n}}
+\def \oscr {\mathscr{o}}
+\def \pscr {\mathscr{p}}
+\def \qscr {\mathscr{q}}
+\def \rscr {\mathscr{r}}
+\def \sscr {\mathscr{s}}
+\def \tscr {\mathscr{t}}
+\def \uscr {\mathscr{u}}
+\def \vscr {\mathscr{v}}
+\def \wscr {\mathscr{w}}
+\def \xscr {\mathscr{x}}
+\def \yscr {\mathscr{y}}
+\def \zscr {\mathscr{z}}
+
+\def \Ahat {\widehat{A}}
+\def \Bhat {\widehat{B}}
+\def \Chat {\widehat{C}}
+\def \Dhat {\widehat{D}}
+\def \Ehat {\widehat{E}}
+\def \Fhat {\widehat{F}}
+\def \Ghat {\widehat{G}}
+\def \Hhat {\widehat{H}}
+\def \Ihat {\widehat{I}}
+\def \Jhat {\widehat{J}}
+\def \Khat {\widehat{K}}
+\def \Lhat {\widehat{L}}
+\def \Mhat {\widehat{M}}
+\def \Nhat {\widehat{N}}
+\def \Ohat {\widehat{O}}
+\def \Phat {\widehat{P}}
+\def \Qhat {\widehat{Q}}
+\def \Rhat {\widehat{R}}
+\def \Shat {\widehat{S}}
+\def \That {\widehat{T}}
+\def \Uhat {\widehat{U}}
+\def \Vhat {\widehat{V}}
+\def \What {\widehat{W}}
+\def \Xhat {\widehat{X}}
+\def \Yhat {\widehat{Y}}
+\def \Zhat {\widehat{Z}}
+\def \ahat {\hat{a}}
+\def \bhat {\hat{b}}
+\def \chat {\hat{c}}
+\def \dhat {\hat{d}}
+\def \ehat {\hat{e}}
+\def \fhat {\hat{f}}
+\def \ghat {\hat{g}}
+\def \hhat {\hat{h}}
+\def \ihat {\hat{i}}
+\def \jhat {\hat{j}}
+\def \khat {\hat{k}}
+\def \lhat {\hat{l}}
+\def \mhat {\hat{m}}
+\def \nhat {\hat{n}}
+\def \ohat {\hat{o}}
+\def \phat {\hat{p}}
+\def \qhat {\hat{q}}
+\def \rhat {\hat{r}}
+\def \shat {\hat{s}}
+\def \that {\hat{t}}
+\def \uhat {\hat{u}}
+\def \vhat {\hat{v}}
+\def \what {\hat{w}}
+\def \xhat {\hat{x}}
+\def \yhat {\hat{y}}
+\def \zhat {\hat{z}}
+
+\def \Abar {\overline{A}}
+\def \Bbar {\overline{B}}
+\def \Cbar {\overline{C}}
+\def \Dbar {\overline{D}}
+\def \Ebar {\overline{E}}
+\def \Fbar {\overline{F}}
+\def \Gbar {\overline{G}}
+\def \Hbar {\overline{H}}
+\def \Ibar {\overline{I}}
+\def \Jbar {\overline{J}}
+\def \Kbar {\overline{K}}
+\def \Lbar {\overline{L}}
+\def \Mbar {\overline{M}}
+\def \Nbar {\overline{N}}
+\def \Obar {\overline{O}}
+\def \Pbar {\overline{P}}
+\def \Qbar {\overline{Q}}
+\def \Rbar {\overline{R}}
+\def \Sbar {\overline{S}}
+\def \Tbar {\overline{T}}
+\def \Ubar {\overline{U}}
+\def \Vbar {\overline{V}}
+\def \Wbar {\overline{W}}
+\def \Xbar {\overline{X}}
+\def \Ybar {\overline{Y}}
+\def \Zbar {\overline{Z}}
+\def \abar {\bar{a}}
+\def \bbar {\bar{b}}
+\def \cbar {\bar{c}}
+\def \dbar {\bar{d}}
+\def \ebar {\bar{e}}
+\def \fbar {\bar{f}}
+\def \gbar {\bar{g}}
+\def \hbar {\bar{h}}
+\def \ibar {\bar{i}}
+\def \jbar {\bar{j}}
+\def \kbar {\bar{k}}
+\def \lbar {\bar{l}}
+\def \mbar {\bar{m}}
+\def \nbar {\bar{n}}
+\def \obar {\bar{o}}
+\def \pbar {\bar{p}}
+\def \qbar {\bar{q}}
+\def \rbar {\bar{r}}
+\def \sbar {\bar{s}}
+\def \tbar {\bar{t}}
+\def \ubar {\bar{u}}
+\def \vbar {\bar{v}}
+\def \wbar {\bar{w}}
+\def \xbar {\bar{x}}
+\def \ybar {\bar{y}}
+\def \zbar {\bar{z}}
+
+\def \Atilde {\widetilde{A}}
+\def \Btilde {\widetilde{B}}
+\def \Ctilde {\widetilde{C}}
+\def \Dtilde {\widetilde{D}}
+\def \Etilde {\widetilde{E}}
+\def \Ftilde {\widetilde{F}}
+\def \Gtilde {\widetilde{G}}
+\def \Htilde {\widetilde{H}}
+\def \Itilde {\widetilde{I}}
+\def \Jtilde {\widetilde{J}}
+\def \Ktilde {\widetilde{K}}
+\def \Ltilde {\widetilde{L}}
+\def \Mtilde {\widetilde{M}}
+\def \Ntilde {\widetilde{N}}
+\def \Otilde {\widetilde{O}}
+\def \Ptilde {\widetilde{P}}
+\def \Qtilde {\widetilde{Q}}
+\def \Rtilde {\widetilde{R}}
+\def \Stilde {\widetilde{S}}
+\def \Ttilde {\widetilde{T}}
+\def \Utilde {\widetilde{U}}
+\def \Vtilde {\widetilde{V}}
+\def \Wtilde {\widetilde{W}}
+\def \Xtilde {\widetilde{X}}
+\def \Ytilde {\widetilde{Y}}
+\def \Ztilde {\widetilde{Z}}
+\def \atilde {\tilde{a}}
+\def \btilde {\tilde{b}}
+\def \ctilde {\tilde{c}}
+\def \dtilde {\tilde{d}}
+\def \etilde {\tilde{e}}
+\def \ftilde {\tilde{f}}
+\def \gtilde {\tilde{g}}
+\def \heightilde {\tilde{h}}
+\def \itilde {\tilde{i}}
+\def \jtilde {\tilde{j}}
+\def \ktilde {\tilde{k}}
+\def \ltilde {\tilde{l}}
+\def \mtilde {\tilde{m}}
+\def \ntilde {\tilde{n}}
+\def \otilde {\tilde{o}}
+\def \ptilde {\tilde{p}}
+\def \qtilde {\tilde{q}}
+\def \rtilde {\tilde{r}}
+\def \stilde {\tilde{s}}
+\def \ttilde {\tilde{t}}
+\def \utilde {\tilde{u}}
+\def \vtilde {\tilde{v}}
+\def \wtilde {\tilde{w}}
+\def \xtilde {\tilde{x}}
+\def \ytilde {\tilde{y}}
+\def \ztilde {\tilde{z}}
+
+\def \Abf {\mathbf{A}}
+\def \Bbf {\mathbf{B}}
+\def \Cbf {\mathbf{C}}
+\def \Dbf {\mathbf{D}}
+\def \Ebf {\mathbf{E}}
+\def \Fbf {\mathbf{F}}
+\def \Gsf {\mathbf{G}}
+\def \Hbf {\mathbf{H}}
+\def \Ibf {\mathbf{I}}
+\def \Jbf {\mathbf{J}}
+\def \Kbf {\mathbf{K}}
+\def \Lbf {\mathbf{L}}
+\def \Mbf {\mathbf{M}}
+\def \Nbf {\mathbf{N}}
+\def \Obf {\mathbf{O}}
+\def \Pbf {\mathbf{P}}
+\def \Qbf {\mathbf{Q}}
+\def \Rbf {\mathbf{R}}
+\def \Sbf {\mathbf{S}}
+\def \Tbf {\mathbf{T}}
+\def \Ubf {\mathbf{U}}
+\def \Vbf {\mathbf{V}}
+\def \Wbf {\mathbf{W}}
+\def \Xbf {\mathbf{X}}
+\def \Ybf {\mathbf{Y}}
+\def \Zbf {\mathbf{Z}}
+\def \abf {\mathbf{a}}
+\def \bbf {\mathbf{b}}
+\def \cbf {\mathbf{c}}
+\def \dbf {\mathbf{d}}
+\def \ebf {\mathbf{e}}
+\def \fbf {\mathbf{f}}
+\def \gbf {\mathbf{g}}
+\def \hbf {\mathbf{h}}
+\def \ibf {\mathbf{i}}
+\def \jbf {\mathbf{j}}
+\def \kbf {\mathbf{k}}
+\def \lbf {\mathbf{l}}
+\def \mbf {\mathbf{m}}
+\def \nbf {\mathbf{n}}
+\def \obf {\mathbf{o}}
+\def \pbf {\mathbf{p}}
+\def \qbf {\mathbf{q}}
+\def \rbf {\mathbf{r}}
+\def \sbf {\mathbf{s}}
+\def \tbf {\mathbf{t}}
+\def \ubf {\mathbf{u}}
+\def \vbf {\mathbf{v}}
+\def \wbf {\mathbf{w}}
+\def \xbf {\mathbf{x}}
+\def \ybf {\mathbf{y}}
+\def \zbf {\mathbf{z}}
+
+\def \Asf  {\mathsf{A}}
+\def \Bsf  {\mathsf{B}}
+\def \Csf  {\mathsf{C}}
+\def \Dsf  {\mathsf{D}}
+\def \Esf  {\mathsf{E}}
+\def \Fsf  {\mathsf{F}}
+\def \Gsf  {\mathsf{G}}
+\def \Hsf  {\mathsf{H}}
+\def \Isf  {\mathsf{I}}
+\def \Jsf  {\mathsf{J}}
+\def \Ksf  {\mathsf{K}}
+\def \Lsf  {\mathsf{L}}
+\def \Msf  {\mathsf{M}}
+\def \Nsf  {\mathsf{N}}
+\def \Osf  {\mathsf{O}}
+\def \Psf  {\mathsf{P}}
+\def \Qsf  {\mathsf{Q}}
+\def \Rsf  {\mathsf{R}}
+\def \Ssf  {\mathsf{S}}
+\def \Tsf  {\mathsf{T}}
+\def \Usf  {\mathsf{U}}
+\def \Vsf  {\mathsf{V}}
+\def \Wsf  {\mathsf{W}}
+\def \Xsf  {\mathsf{X}}
+\def \Ysf  {\mathsf{Y}}
+\def \Zsf  {\mathsf{Z}}
+
+\def \asf  {\mathsf{a}}
+\def \bsf  {\mathsf{b}}
+\def \csf  {\mathsf{c}}
+\def \dsf  {\mathsf{d}}
+\def \esf  {\mathsf{e}}
+\def \fsf  {\mathsf{f}}
+\def \gsf  {\mathsf{g}}
+\def \hsf  {\mathsf{h}}
+\def \isf  {\mathsf{i}}
+\def \jsf  {\mathsf{j}}
+\def \ksf  {\mathsf{k}}
+\def \lsf  {\mathsf{l}}
+\def \msf  {\mathsf{m}}
+\def \nsf  {\mathsf{n}}
+\def \osf  {\mathsf{o}}
+\def \psf  {\mathsf{p}}
+\def \qsf  {\mathsf{q}}
+\def \rsf  {\mathsf{r}}
+\def \ssf  {\mathsf{s}}
+\def \tsf  {\mathsf{t}}
+\def \usf  {\mathsf{u}}
+\def \vsf  {\mathsf{v}}
+\def \wsf  {\mathsf{w}}
+\def \xsf  {\mathsf{x}}
+\def \ysf  {\mathsf{y}}
+\def \zsf  {\mathsf{z}}
+
+\def \AAbar {\overline{\mathbb{A}}}
+\def \BBbar {\overline{\mathbb{B}}}
+\def \CCbar {\overline{\mathbb{C}}}
+\def \DDbar {\overline{\mathbb{D}}}
+\def \EEbar {\overline{\mathbb{E}}}
+\def \FFbar {\overline{\mathbb{F}}}
+\def \GGbar {\overline{\mathbb{G}}}
+\def \HHbar {\overline{\mathbb{H}}}
+\def \IIbar {\overline{\mathbb{I}}}
+\def \JJbar {\overline{\mathbb{J}}}
+\def \KKbar {\overline{\mathbb{K}}}
+\def \LLbar {\overline{\mathbb{L}}}
+\def \MMbar {\overline{\mathbb{M}}}
+\def \NNbar {\overline{\mathbb{N}}}
+\def \OObar {\overline{\mathbb{O}}}
+\def \PPbar {\overline{\mathbb{P}}}
+\def \QQbar {\overline{\mathbb{Q}}}
+\def \RRbar {\overline{\mathbb{R}}}
+\def \SSbar {\overline{\mathbb{S}}}
+\def \TTbar {\overline{\mathbb{T}}}
+\def \UUbar {\overline{\mathbb{U}}}
+\def \VVbar {\overline{\mathbb{V}}}
+\def \WWbar {\overline{\mathbb{W}}}
+\def \XXbar {\overline{\mathbb{X}}}
+\def \YYbar {\overline{\mathbb{Y}}}
+\def \ZZbar {\overline{\mathbb{Z}}}
+
+\newcommand{\Rrm}{\mathrm{R}}
+\newcommand{\Lrm}{\mathrm{L}}
+\newcommand{\Hrm}{\mathrm{H}}
+
+\def \Lra   {\Leftrightarrow}
+\def \lto   {\longrightarrow}
+\def \mono  {\hookrightarrow}
+\def \lmono {\longhookrightarrow}
+\def \epi   {\twoheadrightarrow}
+\def \lepi  {\longtwoheadrightarrow}
+\def \riso  {\stackrel{\sim}{\rightarrow}}
+\def \liso {\stackrel{\sim}{\longrightarrow}}
+\def \bij   {\stackrel{1:1}{\rightarrow}}
+\def \lbij  {\stackrel{1:1}{\longrightarrow}}
+\def \pairing {\langle\,\, , \, \rangle}
+
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\absspc}{\abs{\,\cdot\,}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\normspc}{\norm{\,\cdot\,}}
+
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Det}{Det}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Span}{Span}
+\DeclareMathOperator{\Cent}{Cent}
+\DeclareMathOperator{\Adm}{Adm}
+\DeclareMathOperator{\Sch}{Sch}
+\DeclareMathOperator{\Rings}{Rings}
+
+\DeclareMathOperator{\Disc}{Disc}
+
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\cores}{cores}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\image}{image}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\prt}{part}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Eis}{Eis}
+\DeclareMathOperator{\Ob}{Ob}
+
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\Reg}{Reg}
+
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\cInd}{c-Ind}
+
+
+
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\slp}{sl}
+\DeclareMathOperator{\Sel}{Sel}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\BSD}{BSD}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Id}{Id}
+
+\newcommand{\rig}{\mathrm{rig}}
+\DeclareMathOperator{\Selmer}{Selmer}
+
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\supp}{supp}
+
+\newcommand{\bd}{\mathrm{bd}}
+
+\DeclareMathOperator{\new}{new}
+\DeclareMathOperator{\old}{old}
+
+\DeclareMathOperator{\Morph}{Morph}
+
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Symb}{Symb}
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\MaxSpec}{MaxSpec}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Spf}{Spf}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\Spa}{Spa}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Coker}{Coker}
+\newcommand{\alg}{\mathrm{alg}}
+\newcommand{\sep}{\mathrm{sep}}
+\newcommand{\perf}{\mathrm{perf}}
+
+\DeclareMathOperator{\sign}{sign}
+\newcommand{\unr}{\mathrm{unr}}
+\newcommand{\std}{\mathrm{std}}
+
+\newcommand{\tors}{\mathrm{tors}}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\corank}{corank}
+\DeclareMathOperator{\codim}{codim}
+
+\newcommand{\abcd}[4]{\left(
+        \begin{smallmatrix}#1&#2\\#3&#4\end{smallmatrix}\right)}
+\newcommand{\mthree}[9]{\left(
+        \begin{matrix}#1&#2&#3\\#4&#5&#6\\#7&#8&#9
+        \end{matrix}\right)}
+\newcommand{\mtwo}[4]{\left(
+        \begin{matrix}#1&#2\\#3&#4
+        \end{matrix}\right)}
+\newcommand{\vtwo}[2]{\left(
+        \begin{matrix}#1\\#2
+        \end{matrix}\right)}
+\newcommand{\smallmtwo}[4]{\left(
+        \begin{smallmatrix}#1&#2\\#3&#4
+        \end{smallmatrix}\right)}
+        
+
+
+\DeclareMathOperator{\Ad}{Ad}
+\newcommand{\gl}{\mathfrak{gl}}
+
+\DeclareMathOperator{\Nilp}{Nilp}
+\DeclareMathOperator{\Alg}{Alg}
+\newcommand{\ft}{\mathrm{ft}}
+\newcommand{\fg}{\mathrm{fg}}
+\newcommand{\fp}{\mathrm{fp}}
+
+\DeclareMathOperator{\Noeth}{Noeth}
+\DeclareMathOperator{\noeth}{noeth}
+
+\DeclareMathOperator{\nilp}{nilp}
+\DeclareMathOperator{\unip}{unip}
+\DeclareMathOperator{\isom}{isom}
+\DeclareMathOperator{\Iw}{Iw}
+
+
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\sm}{\mathrm{sm}}
+
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\qlog}{qlog}
+\DeclareMathOperator{\BT}{BT}
+\newcommand{\Def}{\mathfrak{Def}}
+\newcommand{\RZ}{\mathsf{RZ}}
+
+\DeclareMathOperator{\ab}{ab}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\fr}{fr}
+\DeclareMathOperator{\Ver}{Ver}
+\DeclareMathOperator{\Norm}{Norm}
+\DeclareMathOperator{\ord}{ord}
+
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\GSp}{GSp}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Spin}{Spin}
+\DeclareMathOperator{\GSpin}{GSpin}
+
+\newcommand{\der}{\mathrm{der}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\scon}{\mathrm{sc}}
+\newcommand{\af}{\mathrm{af}}
+\DeclareMathOperator{\Fit}{Fit}
+
+\DeclareMathOperator{\Gal}{Gal}
+
+\newcommand{\GLn}{\GL_n}
+
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\order}{order}
+\newcommand{\ur}{\mathrm{ur}}
+\newcommand{\univ}{\mathrm{univ}}
+\newcommand{\ver}{\mathrm{ver}}
+\newcommand{\fl}{\mathrm{fl}}
+\newcommand{\flt}{\mathrm{flat}}
+
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\QHom}{QHom}
+\newcommand{\lhom}{\mathscr{H}\mathit{om}}
+\newcommand{\lend}{\mathscr{E}\mathit{nd}}
+\newcommand{\lspec}{\underline{\Spec}}
+\newcommand{\lspf}{\underline{\Spf}}
+\newcommand{\lder}{\mathscr{D}\mathit{er}}
+\newcommand{\llie}{\mathscr{L}\mathit{ie}}
+
+\DeclareMathOperator{\Mor}{Mor}
+\DeclareMathOperator{\End}{End}
+
+\DeclareMathOperator{\Lie}{Lie}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+
+\newcommand{\Fil}{\mathrm{Fil}}
+\newcommand{\gr}{\mathrm{gr}}
+\DeclareMathOperator{\Gr}{Gr}
+
+\DeclareMathOperator{\Mod}{Mod}
+
+
+\DeclareMathOperator{\Rep}{Rep}
+
+\DeclareMathOperator{\Isog}{Isog}
+\DeclareMathOperator{\Qisg}{Qisg}
+
+\DeclareMathOperator{\obj}{obj}
+\DeclareMathOperator{\Funct}{Funct}
+\DeclareMathOperator{\Fct}{\boldsymbol{\Funct}}
+
+\DeclareMathOperator{\dirb}{\boldsymbol{dir}}
+\DeclareMathOperator{\invb}{\boldsymbol{inv}}
+\DeclareMathOperator{\sys}{\boldsymbol{sys}}
+\DeclareMathOperator{\depth}{depth}
+
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\sat}{\mathrm{sat}}
+
+\newcommand{\Ch}{\mbox{\rm\bf Ch}}
+
+\newcommand{\Sets}{\mbox{\rm\bf Sets}}
+\newcommand{\Ab}{\mbox{\rm\bf Ab}}
+\newcommand{\Groups}{\mbox{\rm\bf Groups}}
+\newcommand{\lmod}[1]{{#1}\text{-}\mbox{\rm\bf mod}}
+\newcommand{\rmod}[1]{\mbox{\rm\bf mod}\text{-}{#1}}
+\newcommand{\bimod}[2]{{#1}\text{-}\mbox{\rm\bf mod}\text{-}{#2}}
+\newcommand{\forget}{\mathrm{(forget)}}
+
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\cyl}{cyl}
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\length}{length}
+
+\author{}
+\title{Solutions of Hartshorne's Algebraic Geometry}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+
+\section{Varieties}
+
+\subsection{Affine Varieties}
+
+%Exercise 1
+\begin{exer}
+$ \ $ \\
+\begin{enumerate}[label=(\alph*)]
+    \item Let $Y$ be the plane curve $y = x^2$ (i.e., $Y$ is the zero set of the polynomial $f = y - x^2$). Show that $A(Y)$ is isomorphic to a polynomial ring in one variable over $k$.
+    \item Let $Z$ be the plane curve $xy=1$. Show that $A(Z)$ is not isomorphic to a polynomial ring in one variable over $k$.
+    \item Let $f$ be any irreducible quadratic polynomial in $k[x, y]$, and let $W$ be the conic defined by $f$. Show that $A(W)$ is isomorphic to $A(Y)$ or $A(Z)$. Which one is it when?
+\end{enumerate}
+\end{exer}
+\begin{proof}
+$ \ $\\
+\begin{enumerate}[label=(\alph*)]
+\item Since $y-x^2$ is an irreducible polynomial, $(y-x^2)$ is a prime ideal of $k[x, y]$, so 
+\begin{align*}
+A(Y) &= k[x, y] / I(Y) = k[x, y] / I(Z(y-x^2)) \\
+&= k[x, y]/ \sqrt{(y-x^2)} = k[x, y] / (y-x^2)
+\end{align*}
+Consider the map
+$$\varphi : k[x, y]/(y-x^2) \to k[t]$$
+$$f(x, y) + (y-x^2) \mapsto f(t, t^2)$$
+If $y-x^2 \mid f(x, y)$, then $f(t, t^2) = 0$ so it is well defined ring homomorphism. And define
+$$\psi : k[t] \to k[x, y]/(y-x^2)$$
+$$g(t) \mapsto g(x) + (y-x^2)$$
+We want to show that $\varphi \circ \psi = 1_{k[t]}$ and $\psi \circ \varphi = 1_{k[x, y]/(y-x^2)}$ so $k[t] \cong k[x, y] / (y-x^2)$. The first one is easy because
+$$\varphi (\psi (g(t))) = \varphi(g(x) + (y-x^2)) = g(t)$$
+Take any $f(x, y) = \sum_{i, j} a_{ij} x^i y^j \in k[x, y]$. Then,
+$$\psi (\varphi (f(x, y) + (y-x^2))) = \psi (f(t, t^2)) = f(x, x^2) + (y-x^2)$$
+so we need to show that $f(x, y) - f(x, x^2) \in (y-x^2)$.
+\begin{align*}
+f(x, y) - f(x, x^2) &= \sum_{i, j} a_{ij}x^iy^j - \sum_{i, j} a_{ij} x^ix^{2j} \\
+&= \sum_{i, j} a_{ij} x^i (y^j - (x^2)^j) \\
+&= \sum_{i, j} a_{ij} x^i (y-x^2) \left(y^{j-1} + y^{j-2} (x^2)^{1} + \cdots + y^{1} (x^2)^{j-2} + (x^2)^{j-1} \right)
+\end{align*}
+Hence, $A(Y) \cong k[t]$
+\item Note that
+$$A(Z) = k[x, y] / (xy - 1)$$
+and suppose $\theta : A(Z) \to k[t]$ is a ring isomorphism. Then, $x+ (xy-1), y + (xy -1) \in A(Z)$ are unit elements, so $\theta (x+(xy-1)), \theta (y + (xy -1)) \in k[t]$ are unit elements, which implies they are in $k$. Then there is no element in $A(Z)$ that goes to $t$ through the map $\theta$, which is a contradiction with the fact that $\theta$ is an isomorphism.
+\item a
+\end{enumerate}
+\end{proof}
+
+\begin{exer}
+\emph{The Twisted Cubic Curve.} Let $Y \subseteq \AA^3$ be the set $Y = \{ (t, t^2, t^3) \ | \ t \in k \}$. Show that $Y$ is an affine variety of dimension $1$. Find generators for the ideal $I(Y)$. Show that $A(Y)$ is isomorphic to a polynomial ring in one variable over $k$. We say that $Y$ is given by the \emph{parametric representation} $x = t, y = t^2, z = t^3$.
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+\begin{exer}
+Let $Y$ be the algebraic set in $\AA^3$ defined by the two polynomials $x^2 - yz$ and $xz - x$. Show that $Y$ is a union of three irreducible components. Describe them and find their prime ideals.
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+
+\begin{exer}
+  If we identify $\AA^2$ with $\AA^1 \times \AA^1$ in the natural way, show that the Zariski topology on $\AA^2$ is not the product topology of the Zariski topologies on the two copies of $\AA^1$.
+\end{exer}
+\begin{proof}
+  
+\end{proof}
+
+\begin{exer}
+Show that a $k$-algebra $B$ is isomorphic to the affine coordinate ring of some algebraic set in $\AA^n$, for some $n$, if and only if $B$ is a finitely generated $k$-algebra with no nilpotent elements.
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+\begin{exer}
+Any nonempty open subset of an irreducible topological space is dense and irreducible If $Y$ is a subset of a topological space $X$, which is irreducible in its induced topology, then the closure $\overline Y$ is also irreducible.
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+\begin{exer}
+$ \ $ \\
+\begin{enumerate}[label=(\alph*)]
+\item Show that the following conditions are equivalent for a topological space $X$ :(i) $X$ is noetherian; (ii) every nonempty family of closed subsets has a minimal elements; (iii) $X$ satisfies the ascending chain condition for open subsetes; (iv) every nonempty family of open subsets has a maximal elements.
+\item A noetherian topological space is \emph{quasi-compact}, i.e., every open cover has a finite subcover.
+\item Any subset of a noetherian topological space is noetherian in its induced topology.
+\item A noetherian space which is also Hausdorff must be a finite set with the discrete topology.
+\end{enumerate}
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+\begin{exer}
+Let $Y$ be an affine variety of dimension $r$ in $\AA^n$. Let $H$ be a hypersurface in $\AA^n$, and assume that $Y \nsubseteq H$. Then every irreducible component of $Y \cap H$ has dimension $r-1$. (See (7.1) for a generalization.)
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+\begin{exer}
+Let $\afr \subseteq A = k[x_1, \cdots, x_n]$ be an ideal which can be generated by $r$ elements. Then every irreducible component of $Z(\afr)$ has dimension $\ge n-r$.
+\end{exer}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{exer}
+$ \ $\\
+\begin{enumerate}[label=(\alph*)]
+\item If $Y$ is any subset of a topological space $X$, then $\dim Y \le \dim X$.
+\item If $X$ is a topological space which is covered by a family of open subsets $\{U_i\}$, then $\dim X = \sup \dim U_i$.
+\item Give an example of a topological space $X$ and a dense open subset $U$ with $\dim U < \dim X$.
+\item If $Y$ is a closed subset of an irreducible finite-dimensional topological space $X$, and if $\dim Y = \dim X$, then $Y = X$.
+\item Give an example of a noetherian topological space of infinite dimension.
+\end{enumerate}
+\end{exer}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{exer}
+Let $Y \subseteq \AA^3$ be the curve given parametrically by $x=t^3, y=t^4, z=t^5$. Show that $I(Y)$ is a prime ideal of height $2$ in $k[x, y, z]$ which cannot be generated by $2$ elements. We say $Y$ is \emph{not a local complete intersection} cf.(Ex. 2.17).
+\end{exer}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{exer}
+Give an example of an irreducible polynomial $f \in \RR[x, y]$, whose zero set $Z(f)$ in $\AA_{\RR}^2$ is not irreducible (cf. 1.4.2).
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+\subsection{Projective Varieties}
+
+\begin{exer}
+  
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+
+\subsection{Morphisms}
+
+\begin{exer}
+  
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+
+\subsection{Rational Maps}
+
+\begin{exer}
+  
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+
+\subsection{Nonsingular Varieties}
+
+\begin{exer}
+  
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+
+\subsection{Nonsingular Curves}
+
+\begin{exer}
+  
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+
+
+\subsection{Intersections in Projective Space}
+
+\begin{exer}
+  
+\end{exer}
+
+\begin{proof}
+  
+\end{proof}
+\end{document}
