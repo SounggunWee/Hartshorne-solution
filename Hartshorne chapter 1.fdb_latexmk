@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1613982223 "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.tex" "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.pdf" "Hartshorne chapter 1" 1613982231
+["pdflatex"] 1613982223 "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.tex" "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.pdf" "Hartshorne chapter 1" 1613984465
   "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.aux" 1613982224 1847 a6092ece240b8e8f877eaaa8a7125d72 ""
-  "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.tex" 1613982222 27641 f3c8b1e83d481ab0ff28d44420ba5e8d ""
+  "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.tex" 1613984464 27641 f3c8b1e83d481ab0ff28d44420ba5e8d ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1480098689 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -263,13 +263,13 @@
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "Hartshorne chapter 1.aux" 1613982224 1847 a6092ece240b8e8f877eaaa8a7125d72 ""
   "Hartshorne chapter 1.out" 1613982224 555 bdcf5b8f7212596ab748634332069836 ""
-  "Hartshorne chapter 1.tex" 1613982222 27641 f3c8b1e83d481ab0ff28d44420ba5e8d ""
+  "Hartshorne chapter 1.tex" 1613984464 27641 f3c8b1e83d481ab0ff28d44420ba5e8d ""
   "Hartshorne chapter 1.toc" 1613982224 718 22245d4c56fd97224bb7d77b63907553 ""
   (generated)
-  "Hartshorne chapter 1.log"
-  "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.log"
   "Hartshorne chapter 1.pdf"
   "Hartshorne chapter 1.out"
+  "Hartshorne chapter 1.toc"
+  "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.log"
   "/Users/wiseong-gun/Hartshorne-solution/Hartshorne chapter 1.pdf"
   "Hartshorne chapter 1.aux"
-  "Hartshorne chapter 1.toc"
+  "Hartshorne chapter 1.log"
